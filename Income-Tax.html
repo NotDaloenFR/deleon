@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ 
+    <script>
+    function calculateTax(income) {
+      if (income <= 250000) {
+        return 0;
+      } else if (income <= 400000) {
+        return (income - 250000) * 0.2;
+      } else if (income <= 800000) {
+        return 30000 + (income - 400000) * 0.25;
+      } else if (income <= 2000000) {
+        return 130000 + (income - 800000) * 0.3;
+      } else if (income <= 8000000) {
+        return 490000 + (income - 2000000) * 0.32;
+      } else {
+        return 2410000 + (income - 8000000) * 0.35;
+      }
+    }
+
+    function displayTax() {
+      var income = parseFloat(document.getElementById("income").value);
+      var tax = calculateTax(income);
+      document.getElementById("result").innerHTML = "Income Tax: PHP " + tax.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+
+<style>
+      body {text-align: center;}
+   </style>
+
+  <h1>Tax Calculator</h1>
+
+   <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+</form> 
+
+  <label for="income">Net Taxable Income:</label><br><br>
+  <input type="number" id="income" placeholder="Enter your net taxable income"><br><br>
+  <button onclick="displayTax()">Calculate Tax</button><br><br>
+  <p id="result"></p>
+</body>
+<a href="index.html">Return</a> to Home Page
+</html>

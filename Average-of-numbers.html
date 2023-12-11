@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Average of Natural Numbers</title>
+ <style>
+      h1 {text-align: center;}
+      p {text-align: center;}
+      div {text-align: center;}
+   </style>
+</head>
+<body>
+  <p><centre><h1>Average of Natural Numbers</h1></centre></p>
+  <p><label for="n1">Type the 1st number:</label></p>
+  <p><input id="n1" type="number" onkeyup="computeAverage()"> <br><br></p>
+  <p><label for="n2">Type the 2nd number:</label></p>
+  <p><input id="n2" type="number" onkeyup="computeAverage()"> <br><br></p>
+  <p><label for="n3">Type the 3rd number:</label></p>
+  <p><input id="n3" type="number" onkeyup="computeAverage()"> <br><br></p>
+  <p><label for="n4">Type the 4th number:</label></p>
+  <p><input id="n4" type="number" onkeyup="computeAverage()"> <br><br></p>
+  <p><label for="n5">Type the 5th number:</label></p>
+  <p><input id="n5" type="number" onkeyup="computeAverage()"> <br><br></p>
+  <p><label for="n6">Type the 6th number:</label></p>
+  <p><input id="n6" type="number" onkeyup="computeAverage()"> <br><br></p>
+
+  <p><label for="average">The Average is: </label></p>
+  <p><input id="average" name="average" type="number" readonly><br><br></p>
+
+  <br><br><br>
+  Press <a href="index.html">here</a> to return to home page
+
+  <script>
+    function computeAverage() {
+      var x1, x2, x3, x4, x5, x6;
+
+      x1 = document.getElementById("n1").value * 1;
+      x2 = document.getElementById("n2").value * 1;
+      x3 = document.getElementById("n3").value * 1;
+      x4 = document.getElementById("n4").value * 1;
+      x5 = document.getElementById("n5").value * 1;
+      x6 = document.getElementById("n6").value * 1;
+
+      var average = (x1 + x2 + x3 + x4 + x5 + x6) / 6; // Calculate the average
+      average = average.toFixed(5);
+
+      document.getElementById("average").value = average;
+    }
+  </script>
+</body>
+</html>

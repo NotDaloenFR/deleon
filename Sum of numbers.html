@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body> 
+  <style>
+   #maindiv {
+  display:grid;
+  width: 90%;  
+  }
+
+  #headerdiv {
+   text-align: center; 
+   background-color: 
+  }
+</style>
+
+    <h1>This page ADDS 2 numbers</h1>
+    <br> 
+    <label for="n1">Type the 1st number:</label>
+    <input id="n1" type="number" onkeyup="computesum()"> <br><br>
+    <label for="n2">Type the 2nd number:</label>
+    <input id="n2" type="number" onkeyup="computesum()"> <br><br>
+
+    <label for = "sum">The sum is: </label>
+    <input id="sum" name="sum" type="number>" <readonly></input> <br>
+   
+    
+    <br><br><br>
+    <a href="index.html">Return to Home Page</a>
+    
+    <script>
+      function computesum(){
+        
+        var x1, x2, x3;
+
+        x1 = document.getElementById("n1").value*1; 
+        x2 = document.getElementById("n2").value*1; 
+        x3 = x1+x2;
+        document.getElementById("sum").value = x3;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factorial Calculator</title>
+</head>
+
+<body>
+  <h2>Generate Your Factorial!</h2>
+  <form>
+    <label>Enter Number: </label><br><br>
+    <input type="number" id="x1"><br><br>
+    <input type="button" value="Generate" onclick="getFac()"><br><br>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function fac(N) {
+      if (N > 1) {
+        return N * fac(N - 1);
+      } else {
+        return N;
+      }
+    }
+
+    function getFac() {
+      var n = document.getElementById('x1').value;
+      var resultContainer = document.getElementById('result');
+
+      if (n === '' || isNaN(n)) {
+        resultContainer.innerHTML = "Please enter a valid number.";
+      } else {
+        var factorialResult = fac(parseInt(n));
+        resultContainer.innerHTML = "Factorial is " + factorialResult;
+      }
+    }
+  </script>
+</body>
+
+</html>
