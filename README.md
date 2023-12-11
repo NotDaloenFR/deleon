@@ -22,15 +22,15 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">Conversion <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="Temperature.html" class="w3-bar-item w3-button">Fahrenheit to Celcius</a>
-        <a href="Measuring-system.html" class="w3-bar-item w3-button">Meters to Feet</a>
+        <a href="Fahrenheit-to-Celcius.html" class="w3-bar-item w3-button">Fahrenheit to Celcius</a>
+        <a href="Meters-to-Feet.html" class="w3-bar-item w3-button">Meters to Feet</a>
       </div>
     </div>
 
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">Income Tax Calculator<i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="Income-tax.html" class="w3-bar-item w3-button">Income Tax calculator online</a>
+        <a href="Income-Tax.html" class="w3-bar-item w3-button">Income Tax calculator online</a>
       </div>
     </div>
 
@@ -47,7 +47,7 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">Simple Payroll<i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="payroll.html" class="w3-bar-item w3-button">Simple Payroll</a>                
+        <a href="Payroll.html" class="w3-bar-item w3-button">Simple Payroll</a>                
       </div>
     </div>
 
