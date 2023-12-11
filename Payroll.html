@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Program</title>
+  <style>
+
+    body {text-align: center;}
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+  <script>
+    var payrollList = [];
+
+    function addEmployee() {
+      var employeeName = prompt("Enter Employee Name:");
+      var daysWorked = parseFloat(prompt("Enter Days Worked:"));
+      var dailyRate = parseFloat(prompt("Enter Daily Rate:"));
+      var deductionAmount = parseFloat(prompt("Enter Deduction Amount:"));
+
+      var grossPay = daysWorked * dailyRate;
+      var netPay = grossPay - deductionAmount;
+
+      var payrollEntry = {
+        employeeName: employeeName,
+        daysWorked: daysWorked,
+        dailyRate: dailyRate,
+        grossPay: grossPay,
+        deductionAmount: deductionAmount,
+        netPay: netPay
+      };
+
+      payrollList.push(payrollEntry);
+      displayPayroll();
+    }
+
+    function deleteEmployee() {
+      var lineNumberToDelete = parseInt(prompt("Enter Line Number to Delete:"));
+
+      if (lineNumberToDelete >= 1 && lineNumberToDelete <= payrollList.length) {
+        payrollList.splice(lineNumberToDelete - 1, 1);
+        displayPayroll();
+      } else {
+        alert("Invalid Line Number");
+      }
+    }
+
+    function displayPayroll() {
+      var table = "<table><tr><th>No.</th><th>Employee Name</th><th>Days Worked</th><th>Daily Rate</th><th>Gross Pay</th><th>Deduction Amount</th><th>Net Pay</th></tr>";
+
+      for (var i = 0; i < payrollList.length; i++) {
+        table += "<tr><td>" + (i + 1) + "</td><td>" + payrollList[i].employeeName + "</td><td>" + payrollList[i].daysWorked + "</td><td>" + payrollList[i].dailyRate + "</td><td>" + payrollList[i].grossPay + "</td><td>" + payrollList[i].deductionAmount + "</td><td>" + payrollList[i].netPay + "</td></tr>";
+      }
+
+      table += "</table>";
+      document.getElementById("payrollTable").innerHTML = table;
+    }
+    
+  </script>
+</head>
+<body>
+  <h1>Payroll Program</h1>
+  <button onclick="addEmployee()">Add Employee</button>
+  <button onclick="deleteEmployee()">Delete Employee</button>
+  <div id="payrollTable"></div>
+</body>
+<br>Return to <a href="index.html">Home</a> Page</br>
+</html>
